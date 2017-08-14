@@ -156,8 +156,3 @@ def partition(a_list, cb):
 def intersection(lists):
     """This function returns a list of elements common to two lists"""
     return [value for value in lists[0] if value in lists[1]]
-
-
-
-
-# end

@@ -1,3 +1,5 @@
+"""python homework - function exercises"""
+
 from __future__ import print_function
 
 
@@ -109,11 +111,11 @@ def flip_case(string, char):
 
 def multiply_even_numbers(a_list):
     """This function returns the product of all even numbers in a list"""
-    product = 1
+    a_product = 1
     for num in a_list:
         if num % 2 == 0:
-            product *= num
-    return product
+            a_product *= num
+    return a_product
 
 
 def mode(a_list):

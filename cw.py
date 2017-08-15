@@ -104,3 +104,20 @@ def square_digits(num):
     nums = list(str(num))
     sq_list = [str(int(n)**2) for n in nums]
     return int(''.join(sq_list))
+
+
+def get_count(words=None):
+    output = dict(vowels=0, consonants=0)
+    consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p',
+                  'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    if isinstance(words, str):
+        s = words.lower()
+        for char in s:
+            print(char)
+            if char in consonants:
+                output['consonants'] += 1
+            if char in vowels:
+                output['vowels'] += 1
+    return output
+

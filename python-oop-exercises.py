@@ -46,7 +46,7 @@ from __future__ import print_function
 # the mro() method.
 
 
-import random
+from random import shuffle
 
 
 class Deck:
@@ -73,7 +73,7 @@ class Deck:
 
     def shuffle(self):
         if len(self.cards) == 52:
-            random.shuffle(self.cards)
+            shuffle(self.cards)
             return self
         else:
             return 'Deck must be full to be shuffled.'

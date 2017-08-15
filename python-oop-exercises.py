@@ -52,18 +52,18 @@ from random import shuffle
 class Deck:
     """defines a standard deck of cards"""
     def __init__(self):
-        self.cards = []
-        self.suite = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
-        self.value = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10',
-                      'Jack', 'Queen', 'King']
+        suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+        values = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+                  'Jack', 'Queen', 'King']
+        self.cards = [Card(suit, value) for suit in suits for value in values]
 
-    def fill_deck(self):
-        self.cards.clear()
-        for suite in self.suite:
-            for value in self.value:
-                card = Card(suite, value)
-                self.cards.append(card)
-        return 'New deck has {} cards.'.format(len(self.cards))
+    # def fill_deck(self):
+    #     self.cards.clear()
+    #     for suit in self.suit:
+    #         for value in self.value:
+    #             card = Card(suit, value)
+    #             self.cards.append(card)
+    #     return 'New deck has {} cards.'.format(len(self.cards))
 
     def deal_card(self):
         if len(self.cards) > 0:
